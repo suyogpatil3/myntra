@@ -4,59 +4,63 @@ import BrandNames from '../Components/BrandNames';
 import {useState} from 'react';
 import Button from '../Components/ButtonStyled';
 // import Brands from './Brands';
-export default function SideBar({products,allProducts,changeProductArray}) {
-    const[selectedGenderArray,setSelectedGenderArray] = useState([]);
-    let filteredProducts=[];
 
-    let filterItems = (event) =>{
+
+export default function SideBar({products,allProducts,changeProductArray}) {
+    const[selectedGender,setSelectedGender] = useState(false);
+    const [checkedValue, setIsChecked] = useState("");
+    let filteredProducts=[];
+    const brand = "brand";
+    const category = "category";
+    function filterItems (event) {
         let filterValue = event.target.value;
-        filterValue = filterValue.toLowerCase();
-        if(!selectedGenderArray.includes(filterValue)){
-            selectedGenderArray.push(filterValue);
-        }
-        if(selectedGenderArray.length >=2){
-            changeProductArray(allProducts);
-        }
-        else if(filterValue==="men"){
+        console.log(filterValue);
+        filterValue = filterValue;
+        setIsChecked(filterValue);
              filteredProducts = products.filter((product) =>{
-                return !product.gender.toLowerCase().includes("women");
+                return product.gender.includes(filterValue);
               })
-        changeProductArray(filteredProducts);
-        }
-        else if(filterValue==="women" ){
-            filteredProducts = products.filter((product) =>{
-                return product.gender.toLowerCase().includes("Women");
-              })
-        changeProductArray(filteredProducts);
-        }
-        else{
-            changeProductArray(allProducts);
-        }
+     changeProductArray(filteredProducts);
     }
     let onClearAllFilters = (event) =>{
         // window.location.reload();
         let checkboxes = document.querySelectorAll(`input`);
         checkboxes.forEach(check => {
-            if(check.type=="checkbox"){
+            if(check.type=="checkbox" || check.type=="radio"){
                 check.checked = false;
             }
         });
         changeProductArray(allProducts);
     }
+
+    let onSelectAll = (event) =>{
+        let selectValue = event.target.id;
+        let checkboxes = document.querySelectorAll(`input`);
+        checkboxes.forEach(check => {
+            if(check.name==selectValue){
+                check.checked = true;
+            }
+        });
+    }
+    
     return (
         <div className="sideBar"> 
-            <h3>Filters</h3><Button onClick={onClearAllFilters}>Clear All</Button>
-            <div className="genders">
-                <input type="checkbox" value="Men" onChange={filterItems}/>  <label>Men</label><br/>
-                <input type="checkbox" value="Women" onChange={filterItems}/>  <label>Women</label><br/>
-                <input type="checkbox" value="Men" onChange={filterItems}/>  <label>Boys</label><br/>
-                <input type="checkbox" value="Women" onChange={filterItems}/>  <label>Girls</label><br/>
+            <div className="filterGroup">
+                <h3>Filters</h3><Button onClick={onClearAllFilters}>Clear All</Button>
             </div>
-            <h4>Categories</h4>
+            <div className="genders" >
+                <input type="radio" value="Men" checked={checkedValue == "Men"} onChange={filterItems}/>  <label>Men/Boys</label><br/>
+                <input type="radio" value="Women" checked={checkedValue == "Women"} onChange={filterItems}/>  <label>Women/Girls</label><br/>
+            </div>
+            <div className="filterGroup">
+                <h4 className="filterHeading">Categories</h4><Button onClick={onSelectAll} id="category">Select All</Button>
+            </div>
             <div className="filters">
                 <Categories products={products} changeProductArray={changeProductArray}/>
             </div>
-            <h4>Brands</h4>
+            <div className="filterGroup">
+                <h4 className="filterHeading">Brands</h4><Button onClick={onSelectAll} id="brand">Select All</Button>
+            </div>
             <div className="filters">
                 <BrandNames products={products} changeProductArray={changeProductArray}/>
             </div>

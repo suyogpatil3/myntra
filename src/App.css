@@ -5,23 +5,10 @@
     background-color: #ffffff;
     margin-left: 10px;
   }
-/* .productArea{
-   
-  }  */
   
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
   .genders{
     margin-left: 15px;
-    font-size: 13px;
+    font-size: 13.5px;
   }
   .filters{
       height:200px;
@@ -44,6 +31,7 @@
   .price{
       font-size:25px;
       padding-right: 5px;
+      font-weight: 600;
   }
   .icons{
     font-size: x-large;
@@ -51,19 +39,29 @@
     width:100px;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 
   }
   .noProducts{
     display: flex;
     align-items: center;
     justify-content: center;
-    height:80vh;
+    height:40vh;
     width:80vw;
-    color:  rgb(245, 65, 155);;
+    color:  #4c2085;
+  }
+  .filterGroup{
+    height:40px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 5px 5px -5px #3b3b3b;
+    margin-bottom: 5px;
   }
   .searchBox{
       width: 300px;
-      height: 40px;
+      height: 50px;
       outline: 0px;
       text-align: center;
       background: #e2e2e2;
@@ -76,14 +74,17 @@
   }
   .navGenders{
     display: flex;
-    width:200px;
+    width:290px;
     justify-content: space-between;
     font-weight: 500;
     margin-top: 5px;
+    font-size: 23px;
+    padding: 0px 5px 0px 5px;
   }
   select{
     width:100px;
     height: 40px;
+    margin-top: 5px;
     border-radius: 10px;
     text-align: center;
   }
@@ -93,19 +94,32 @@
   .priceRs{
     font-size:22px;
   }
+  .companyName{
+    font-family: 'B612', sans-serif;
+    font-size: 25px;
+    margin-top: 5px;
+  }
   .logo{
-      width:120px;
+      width:60px;
       height:auto;
       border-radius: 2px;
+      margin-top: 0px;
+      margin-left: 10px;
+      box-shadow: 5px 5px 5px rgb(101, 32, 165);
   }
   .header{
-      margin-top: 10px;
+      padding-top: 5px;
       margin-bottom: 10px;
-      height:50px;
+      padding-bottom: 10px;
+      height:80px;
       display:flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
       box-shadow: 0 10px 10px -10px #333;
+      background-color: rgb(76, 32, 133);
+      color:white;
+      
   }
   .productBody{
       display: grid;
@@ -116,7 +130,7 @@
       height:100%;
       box-shadow: 10px 0 10px -10px rgb(42, 42, 42);
       padding-left: 10px;
-      background:#f5f5f5
+      background:#f0efef
   }
   h3{
     display: inline;
@@ -125,7 +139,7 @@
     display: inline;
     font-size:medium;
     background: rgb(245, 65, 155);
-    box-shadow: -5px -5px 10px white,  5px 5px 10px gray;
+    box-shadow: -5px -15px 15px white,  5px 15px 15px gray;
     transition: all 0.2s ease-in-out;
     color: white;
     border: 0;
@@ -138,9 +152,9 @@
 
   
   .cardDesign{
-    width:  220px;
-    max-height:400px;
-    height:400px;
+    width:  230px;
+    max-height:410px;
+    height:410px;
     display: inline-block;
     margin:10px;
     padding:10px;
@@ -159,33 +173,66 @@
     height:80vh;
     /* width: 500px; */
   }
+  .brand{
+          height:85px;
+  }
   .brandName{
-            height:85px;
+    font-size:20px;
+    color: #6b32b6;
+    font-weight: 500;
+    margin-bottom: 0px;
   }
   .filterValues{
       padding-left: 10px;
-      font-size: 13px;
+      font-size: 13.5px;
   }
 
   img{
       max-width: 190px;
       height:auto;
-      border-radius: 40px;
+      border-radius: 30px;
   }
   .grow { 
     transition: all .2s ease-in-out;
    }
 
    .prices{
-        height:40px;
-        padding-bottom: 5px;
+        height:30px;
+        padding-bottom: 2px;
+        margin-top: 5px;
+       color:rgb(253, 102, 15)
+   }
+   .filterHeading{
+     display: inline;
+     font-size: 20px;
    }
 
    .description{
        font-size:14px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-weight: 400;
    }
   .grow:hover { transform: scale(1.05);
-   /* background-color:  #5e9de6; */
-    background-image : linear-gradient(140deg, #f8def8  0%, #dbdbdb 100%); 
+   /* background-color:  #ff5d48f1; */
+    background-image : linear-gradient(180deg, #e3d1fb  10%, #eeeeee 90%); 
+    -moz-box-shadow: 5px 12px 12px #a1a1a1c2;
+-webkit-box-shadow: 5px 12px 12px #959595c2;
+box-shadow: 5px 12px 12px #929292c2;
   }
   
+  @media only screen and ( max-width: 400px) {
+    .productBody{
+      display: grid;
+      grid-template-columns: 20% 80%;
+  }
+  .App {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #ffffff;
+    margin-left: 10px;
+  }
+
+  }

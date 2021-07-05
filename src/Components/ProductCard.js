@@ -6,8 +6,8 @@ export default function ProductCard({name,brand,imgSrc,price,mrp}) {
              <div className="cardDesign grow">
                 <img src={imgSrc} alt={name}/>
                 <div>
-                    <div className="brandName">
-                    <h5>{brand}</h5>
+                    <div className="brand">
+                    <p className="brandName">{brand}</p>
                     <p className="description"> {name}</p>
                     </div>
                     <div className="prices">

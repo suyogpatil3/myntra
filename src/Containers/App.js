@@ -63,7 +63,7 @@ export default class App extends Component{
     this.setState({loader:true})
     setTimeout(()=>{
     this.setState({filteredProducts:filteredProducts,loader:false});
-    },1200);
+    },1000);
   }
   }
 
@@ -103,9 +103,9 @@ export default class App extends Component{
           {
             (this.state.loader===true) ?
             <div className="loading">
-            <Loader
+               <Loader
               type="Puff"
-              color="#f79b99"
+              color="#ff5d48f1"
               height={200}
               width={200}
               timeout={5000} //3 secs

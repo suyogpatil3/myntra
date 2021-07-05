@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../Myntra_logo.png'
+import logo from '../mLogo.JPG'
 
 const Navigation = ({searchChange,setSortingType}) =>{
     return(
-        <>
-            <div className="header"><span><img src={logo} className="logo"></img>
+        <div className="nav-collapsible">
+            <div className="header"><span className="companyName"><img src={logo} className="logo"></img> Myntra
             </span>
            <span className="navGenders">
                <span>Men</span>
@@ -26,7 +26,7 @@ const Navigation = ({searchChange,setSortingType}) =>{
             <i class="fas fa-bookmark"></i>
             </span>
         </div>        
-        </>
+        </div>
     )
 }
 

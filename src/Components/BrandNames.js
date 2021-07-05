@@ -18,6 +18,7 @@ export default function BrandNames({products,changeProductArray}) {
       return(<Filters name={pro.brand}
                   key ={i}
                   filterItems={filterItems}
+                  nameValue="brand"
                   />)
       }
       )

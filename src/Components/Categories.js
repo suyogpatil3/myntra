@@ -16,10 +16,11 @@ export default function Categories({products,changeProductArray}) {
     return (
         <div>
             {products.map((pro,i) =>{
-          return<Filters name={pro.category}
+                 return<Filters name={pro.category}
                       key ={pro.productId}
                       filterItems={filterItems}
-                      />
+                      nameValue="category"
+                />
           }
           )
         }
