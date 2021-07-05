@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/myntra/static/css/main.239ee4aa.chunk.css",
-    "main.js": "/myntra/static/js/main.a53e6fc9.chunk.js",
-    "main.js.map": "/myntra/static/js/main.a53e6fc9.chunk.js.map",
+    "main.css": "/myntra/static/css/main.5e822386.chunk.css",
+    "main.js": "/myntra/static/js/main.a67d8649.chunk.js",
+    "main.js.map": "/myntra/static/js/main.a67d8649.chunk.js.map",
     "runtime-main.js": "/myntra/static/js/runtime-main.394537c3.js",
     "runtime-main.js.map": "/myntra/static/js/runtime-main.394537c3.js.map",
     "static/css/2.f31b3d76.chunk.css": "/myntra/static/css/2.f31b3d76.chunk.css",
@@ -10,15 +10,16 @@
     "static/js/2.5796ffff.chunk.js.map": "/myntra/static/js/2.5796ffff.chunk.js.map",
     "index.html": "/myntra/index.html",
     "static/css/2.f31b3d76.chunk.css.map": "/myntra/static/css/2.f31b3d76.chunk.css.map",
-    "static/css/main.239ee4aa.chunk.css.map": "/myntra/static/css/main.239ee4aa.chunk.css.map",
+    "static/css/main.5e822386.chunk.css.map": "/myntra/static/css/main.5e822386.chunk.css.map",
     "static/js/2.5796ffff.chunk.js.LICENSE.txt": "/myntra/static/js/2.5796ffff.chunk.js.LICENSE.txt",
-    "static/media/Myntra_logo.76b34227.png": "/myntra/static/media/Myntra_logo.76b34227.png"
+    "static/media/eImg.13468768.svg": "/myntra/static/media/eImg.13468768.svg",
+    "static/media/mLogo.0a8a94a6.JPG": "/myntra/static/media/mLogo.0a8a94a6.JPG"
   },
   "entrypoints": [
     "static/js/runtime-main.394537c3.js",
     "static/css/2.f31b3d76.chunk.css",
     "static/js/2.5796ffff.chunk.js",
-    "static/css/main.239ee4aa.chunk.css",
-    "static/js/main.a53e6fc9.chunk.js"
+    "static/css/main.5e822386.chunk.css",
+    "static/js/main.a67d8649.chunk.js"
   ]
 }
