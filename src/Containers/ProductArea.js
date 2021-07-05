@@ -1,11 +1,11 @@
 import React from 'react';
 import ProductCard from '../Components/ProductCard';
 
-export default function ProductArea({products}) {
+export default function ProductArea({products,clearSearchField}) {
     return (
         <>
         <div className="App">
-            {products.map((pro,i) =>{
+            {(products.length>0) ? products.map((pro,i) =>{
           return<ProductCard id={pro.productId} 
                       name={pro.productName} 
                       brand={pro.brand}
@@ -15,6 +15,7 @@ export default function ProductArea({products}) {
                       imgSrc ={pro.searchImage}/>
           }
           )
+          : <h1 className="noProducts">No Products found for this item !!</h1>
         }
         </div>
         </>

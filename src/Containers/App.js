@@ -73,7 +73,7 @@ export default class App extends Component{
         sortingProducts.sort((a,b) => a.price-b.price);
       }
       else if(sortValue==="discount"){
-        sortingProducts.sort((a,b) => a.discount-b.discount);
+        sortingProducts.sort((a,b) => b.discount-a.discount);
       }
       this.setState({loader:true})
       setTimeout(()=>{
@@ -81,6 +81,7 @@ export default class App extends Component{
       },1200);
     }
   }
+
 
   render() {
    
@@ -105,7 +106,7 @@ export default class App extends Component{
             />
             </div>
             :
-            <ProductArea products={this.state.filteredProducts}/>
+            <ProductArea products={this.state.filteredProducts} clearSearchField={this.clearSearchField}/>
           }
           
         </div> </>

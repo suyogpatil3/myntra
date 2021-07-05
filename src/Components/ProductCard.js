@@ -7,7 +7,7 @@ export default function ProductCard({name,brand,imgSrc,price,mrp}) {
                 <img src={imgSrc} alt={name}/>
                 <div>
                     <div className="brandName">
-                    <h6>{brand}</h6>
+                    <h5>{brand}</h5>
                     <p className="description"> {name}</p>
                     </div>
                     <div className="prices">
