@@ -34,6 +34,13 @@ export default function SideBar({products,allProducts,changeProductArray}) {
         }
     }
     let onClearAllFilters = (event) =>{
+        // window.location.reload();
+        let checkboxes = document.querySelectorAll(`input`);
+        checkboxes.forEach(check => {
+            if(check.type=="checkbox"){
+                check.checked = false;
+            }
+        });
         changeProductArray(allProducts);
     }
     return (

@@ -3,7 +3,7 @@ import React from 'react';
 const Button = styled.button` display: inline;
 font-size:medium;
 background: rgb(245, 65, 155);
-box-shadow: -5px -5px 5px white,  5px 5px 5px lightgray;
+box-shadow: 5px 5px 5px lightgray;
 transition: all 0.2s ease-in-out;
 color: white;
 border: 0;
