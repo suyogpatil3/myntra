@@ -50,6 +50,13 @@ export default class App extends Component{
 
   onSearchChange = (event) =>{
     this.setState({searchfield : event.target.value});
+    if(event.target.value=='' && this.state.searchfield!==''){
+      this.setState({loader:true})
+      setTimeout(()=>{
+      this.setState({filteredProducts:this.state.products,loader:false})
+    },800);
+    }
+    else{
     const filteredProducts = this.state.products.filter((product) =>{
       return product.productName.toLowerCase().includes(this.state.searchfield.toLowerCase())
     })
@@ -57,6 +64,7 @@ export default class App extends Component{
     setTimeout(()=>{
     this.setState({filteredProducts:filteredProducts,loader:false});
     },1200);
+  }
   }
 
   onSortChange = (event) =>{
@@ -84,8 +92,6 @@ export default class App extends Component{
 
 
   render() {
-   
-
     return (
       <div>
         {
@@ -106,7 +112,7 @@ export default class App extends Component{
             />
             </div>
             :
-            <ProductArea products={this.state.filteredProducts} clearSearchField={this.clearSearchField}/>
+            <ProductArea products={this.state.filteredProducts} searchfield={this.state.searchfield}/>
           }
           
         </div> </>
