@@ -1,5 +1,5 @@
 
-import './App.css';
+import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SideBar from './SideBar';
 import Navigation from './NavigationBar';
@@ -7,7 +7,7 @@ import ProductArea from './ProductArea';
 import React, { Component } from 'react';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
-import Error from './Error';
+import Error from '../Components/Error';
 
 export default class App extends Component{
 

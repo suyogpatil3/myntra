@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './Myntra_logo.png'
-
-
+import logo from '../Myntra_logo.png'
 
 const Navigation = ({searchChange,setSortingType}) =>{
     return(

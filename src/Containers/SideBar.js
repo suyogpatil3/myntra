@@ -1,9 +1,8 @@
 import React from 'react'
-import Filters from './Filters'
-import Categories from './Categories';
-import BrandNames from './BrandNames';
+import Categories from '../Components/Categories';
+import BrandNames from '../Components/BrandNames';
 import {useState} from 'react';
-import Button from './ButtonStyled';
+import Button from '../Components/ButtonStyled';
 // import Brands from './Brands';
 export default function SideBar({products,allProducts,changeProductArray}) {
     const[selectedGenderArray,setSelectedGenderArray] = useState([]);
