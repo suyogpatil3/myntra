@@ -46,7 +46,7 @@ export default function SideBar({products,allProducts,changeProductArray}) {
     return (
         <div className="sideBar"> 
             <div className="filterGroup">
-                <h3>Filters</h3><Button onClick={onClearAllFilters}>Clear All</Button>
+                <h4>Filters</h4><Button onClick={onClearAllFilters}>Clear All</Button>
             </div>
             <div className="genders" >
                 <input type="radio" value="Men" checked={checkedValue == "Men"} onChange={filterItems}/>  <label>Men/Boys</label><br/>

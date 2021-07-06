@@ -78,7 +78,7 @@
     justify-content: space-between;
     font-weight: 500;
     margin-top: 5px;
-    font-size: 23px;
+    font-size: 21px;
     padding: 0px 5px 0px 5px;
   }
   select{
@@ -95,29 +95,30 @@
     font-size:22px;
   }
   .companyName{
-    font-family: 'B612', sans-serif;
-    font-size: 25px;
+    /* font-family:"PT Sans" "serif"; */
+    font-size: 40px;
     margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   .logo{
-      width:60px;
+      width:55px;
       height:auto;
       border-radius: 2px;
-      margin-top: 0px;
+      margin-bottom: 5px;
       margin-left: 10px;
-      box-shadow: 5px 5px 5px rgb(101, 32, 165);
   }
   .header{
       padding-top: 5px;
       margin-bottom: 10px;
       padding-bottom: 10px;
-      height:80px;
+      height:70px;
       display:flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
       box-shadow: 0 10px 10px -10px #333;
-      background-color: rgb(76, 32, 133);
+      background-color: rgb(80, 22, 104);
       color:white;
       
   }
@@ -138,7 +139,7 @@
   .clearAll{
     display: inline;
     font-size:medium;
-    background: rgb(245, 65, 155);
+    background: rgb(52, 11, 85);
     box-shadow: -5px -15px 15px white,  5px 15px 15px gray;
     transition: all 0.2s ease-in-out;
     color: white;
@@ -158,11 +159,9 @@
     display: inline-block;
     margin:10px;
     padding:10px;
-    background-color:  #cca4ff;
     border-radius: 20px;
-    background: #f8f8f8;
-    box-shadow:  10px 10px 20px #bebebe,
-             -10px -10px 20px #f1f1f1;  
+    box-shadow:  7px 7px 7px #e7e7e7,
+             -7px -7px 20px #f1f1f1;  
       color:#1f2629;
   }
   
@@ -214,9 +213,7 @@
        align-items: center;
        font-weight: 400;
    }
-  .grow:hover { transform: scale(1.05);
-   /* background-color:  #ff5d48f1; */
-    background-image : linear-gradient(180deg, #e3d1fb  10%, #eeeeee 90%); 
+  .grow:hover { transform: scale(1.07);
     -moz-box-shadow: 5px 12px 12px #a1a1a1c2;
 -webkit-box-shadow: 5px 12px 12px #959595c2;
 box-shadow: 5px 12px 12px #929292c2;

@@ -12,7 +12,8 @@ border-radius: 5px;
 margin-left: 5px;
 margin-right:4px;
  &:hover {
-    box-shadow: -2px -2px 5px white, 2px 2px 5px gray;
+    box-shadow: -4px -4px 7px white, 4px 4px 7px gray;
+    background: #ff4b4ff1;
   }
   
   &:active {
