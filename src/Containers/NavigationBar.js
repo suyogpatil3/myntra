@@ -4,7 +4,7 @@ import logo from '../mLogo.JPG'
 const Navigation = ({searchChange,setSortingType}) =>{
     return(
         <div className="nav-collapsible">
-            <div className="header"><span className="companyName"><img src={logo} className="logo"></img> Myntra
+            <div className="header"><span className="companyName"><img src={logo} className="logo"></img> Myntara
             </span>
            <span className="navGenders">
                <span>Men</span>
